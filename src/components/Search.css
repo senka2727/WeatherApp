@@ -1,0 +1,38 @@
+.SearchElement {
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.SearchElement input {
+    width: 85%;
+    height: 35px;
+    box-sizing: border-box;
+
+    border-radius: 5px;
+
+    outline: none;
+    border: none;
+
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    text-indent: 5px;
+
+    background-color: var(--bg-light);
+    color: var(--text);
+}
+
+.SearchElement button {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 5px;
+    border: 1px solid var(--border);
+
+    background-color: var(--bg-light);
+    color: var(--text);
+}
