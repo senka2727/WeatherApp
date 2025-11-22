@@ -7,7 +7,7 @@ export const WeatherProvider = ({ children }) => {
 
     const search = async (city) => {
         try {
-            const cityCoordsData = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${import.meta.env.VITE_APP_ID}`;
+            const cityCoordsData = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${import.meta.env.VITE_APP_ID}`;
             
             const coordsResponse = await fetch(cityCoordsData);
             const coordsData = await coordsResponse.json();
