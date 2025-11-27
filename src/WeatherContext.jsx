@@ -20,12 +20,20 @@ export const WeatherProvider = ({ children }) => {
             const response = await fetch(url);
             const data = await response.json();
 
+
+            //Getting local time
+            const utcSeconds = data.dt;
+            const timezoneOffset = data.timezone;
+
+            const currentHour = new Date((utcSeconds + timezoneOffset) * 1000).getHours();
+
             setWeather({
                 currentCity: city,
                 temp: data.main.temp,
                 humidity: data.main.humidity,
                 wind: data.wind.speed,
-                type: data.weather[0].main
+                type: data.weather[0].main,
+                is_day: (currentHour >= 6 && currentHour < 18) 
             });
         } catch (error) {
             console.log(error);

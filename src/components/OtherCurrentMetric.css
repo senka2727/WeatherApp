@@ -32,3 +32,24 @@
     width: 20%;
     filter: invert(1);
 }
+
+@media (max-width: 552px){
+    .OtherMetricsElement {
+        height: 25%;
+    }
+
+  .OtherMetricsElement .Container {
+    flex-direction: column;
+  }
+
+  .OtherMetricsElement .OtherMetric {
+    width: 95%;
+    height: 45%;
+    text-align: center;
+  }
+
+  .OtherMetricsElement .OtherMetric img {
+    width: auto;
+    height: 65%;
+  }
+}
